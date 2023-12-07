@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    
+	<head>
+        <link rel="stylesheet" href="stylesheets/index.css">
+		<title>Home</title>
+	</head>
+	<body>
+		<h1>Baller</hl>
+        <div id="testBox">
+
+        </div>
+	</body>
+    <script src="modules/ejs.js"></script>
+    <script>
+        ejs.render("views/resources.html", {}, function(err, str) {
+            if (err) {
+                console.log(err);
+            } else {
+                console.log(1);
+            }
+        });
+    
+    </script>
+</html>

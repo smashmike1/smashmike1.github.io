@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    
+	<head>
+        <link rel="stylesheet" href="stylesheets/index.css">
+		<title>Home</title>
+	</head>
+	<body>
+		<h1>Baller</hl>
+        <div id="testBox">
+
+        </div>
+	</body>
+    <script>
+        var testBox = document.getElementById("testBox");
+        fetch("resources/resourcesData.json")
+            .then(response => response.text())
+            .then(data => {
+                testBox.innerHTML = data;
+            })
+            .catch(err => console.log(err));
+    </script>
+</html>

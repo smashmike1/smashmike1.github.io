@@ -5,7 +5,7 @@ export default function Home() {
     <main>
     <html>
       <head>
-        <title>Home</title>
+        <title>Home </title>
       </head>
       <body>
         <div className="grid grid-cols-3">

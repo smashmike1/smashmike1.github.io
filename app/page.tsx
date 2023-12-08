@@ -15,7 +15,7 @@ export default function Home() {
           </div>
 
           <div className={'place-self-center pt-8'}>
-            <h1  className={`mb-3 text-7xl font-semibold text-center`}>Goober</h1>
+            <h1  className={`mb-3 text-7xl font-semibold text-center`}>Test</h1>
           </div>
         </div>
         

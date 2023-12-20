@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js" integrity="sha384-mZLF4UVrpi/QTWPA7BjNPEnkIfRFn4ZEO3Qt/HFklTJBj/gBOV8G3HcKn4NfQblz" crossorigin="anonymous"></script>
+  <script>
+        const socket = io("https://socketioserver.webpubsub.azure.com", {
+        path: "/clients/socketio/hubs/Hub",
+    });
+
+    const button = document.getElementById("bt1");
+    button.onsubmit = () => {
+        socket.emit("Test", "Hello World");
+    };
+    
+  </script>
+  <body>
+    <input type="submit" id="btl" value="test" />
+  </body>
+</html>

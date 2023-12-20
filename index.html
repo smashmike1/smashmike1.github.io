@@ -7,8 +7,8 @@
     });
 
     const button = document.getElementById("bt1");
-    button.onsubmit = () => {
-        socket.emit("Test", "Hello World");
+    button.onclick = () => {
+        socket.emit("Test", "Test");
     };
     
   </script>

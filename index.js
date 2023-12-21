@@ -2,9 +2,9 @@ const socket = io("https://socketioserver.webpubsub.azure.com", {
   path: "/clients/socketio/hubs/Hub",
 });
 
-socket.on("connect", () => {
-  let token = Cookies.get("token");
-  if (token) {
+socket.on("connect", async () => {
+  let token = await Cookies.get("token");
+  if (token != null) {
     socket.emit("token", token);
   } else {
     let pass = prompt("Test");

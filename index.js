@@ -7,16 +7,20 @@ socket.on("connect", async () => {
   if (token != null) {
     socket.emit("token", token);
   } else {
-    let pass = prompt("Test");
-    socket.emit("Password", pass);
+    let pass = prompt("Password");
   }
 });
-
 socket.on("loadPage", (data) => {
-  document.body.innerHTML = data;
-});
+  document.body.innerHTML = data["page"];
+  loadScript(data["script"]);
+  });
 
 socket.on("assignToken", (token) => {
   Cookies.set("token", token);
 });
 
+function loadScript(script) {
+    let newScript = document.createElement("script");
+    newScript.innerHTML = script;
+    document.head.appendChild(newScript);
+}
